@@ -2,7 +2,7 @@
 
 int main() {
     // Write C code here
-    printf("Try programiz.pro");
+    printf("Hlw Gaurav");
 
     return 0;
 }
