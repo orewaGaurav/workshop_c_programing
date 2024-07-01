@@ -68,16 +68,16 @@
 //     printf("\n");
 // }
 
-#include<stdio.h>
-void main(){
-    char s[100];
-    printf("Enter string : ");
-    gets(s);
-    for(int i=0;s[i]!='\0';i++){
-        printf("%c ",s[i]);
-    }
-    printf("\n");
-}
+// #include<stdio.h>
+// void main(){
+//     char s[100];
+//     printf("Enter string : ");
+//     gets(s);
+//     for(int i=0;s[i]!='\0';i++){
+//         printf("%c ",s[i]);
+//     }
+//     printf("\n");
+// }
 
 
 
