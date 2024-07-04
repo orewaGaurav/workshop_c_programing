@@ -32,6 +32,3 @@ int main(){
     fprintf(ptr,"Name: %s\nRoll = %d\nMarks: %.2f\n",name,roll,marks);
     fclose(ptr);
 }
-
-
-
