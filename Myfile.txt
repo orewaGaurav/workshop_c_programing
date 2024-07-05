@@ -1,0 +1,39 @@
+Roll = 23
+Marks : 34.000000
+Name : fsaRoll = 23
+Marks : 34.000000
+Name : cdRoll = 23
+Marks : 34.000000
+Name : "/Users/gauravkumar/workshop_c_programing/"Roll = 23
+Marks : 34.000000
+Name : &&Roll = 23
+Marks : 34.000000
+Name : gccRoll = 23
+Marks : 34.000000
+Name : fileHandling3.cRoll = 23
+Marks : 34.000000
+Name : -oRoll = 23
+Marks : 34.000000
+Name : fileHandling3Roll = 23
+Marks : 34.000000
+Name : &&Roll = 23
+Marks : 34.000000
+Name : "/Users/gauravkumar/workshop_c_programing/"fileHandling3Roll = 23
+Marks : 34.000000
+Name : cdRoll = 23
+Marks : 34.000000
+Name : "/Users/gauravkumar/workshop_c_programing/"Roll = 23
+Marks : 34.000000
+Name : &&Roll = 23
+Marks : 34.000000
+Name : gccRoll = 23
+Marks : 34.000000
+Name : fileHandling3.cRoll = 23
+Marks : 34.000000
+Name : -oRoll = 23
+Marks : 34.000000
+Name : fileHandling3Roll = 23
+Marks : 34.000000
+Name : &&Roll = 23
+Marks : 34.000000
+Name : "/Users/gauravkumar/workshop_c_programing/"fileHandling3
