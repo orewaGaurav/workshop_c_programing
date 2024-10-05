@@ -11,5 +11,9 @@ int main(){
     scanf("%f",&strVar.marks);
     printf("Roll: %d\n",strVar.roll);
     printf("marks: %.2f\n",strVar.marks);
+    printf("Enter name: ");
+    fflush(stdin);
+    gets(strVar.name);
+    printf("name: %s\n",strVar.name);
 }
 
