@@ -12,3 +12,4 @@ int main(){
     printf("Roll: %d\n",strVar.roll);
     printf("marks: %.2f\n",strVar.marks);
 }
+
