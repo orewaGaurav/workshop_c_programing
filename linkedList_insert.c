@@ -50,7 +50,7 @@ void insert(){
     scanf("%d",&add->data);
     add ->next =head;
     head = add;
-    printf("node inserted successfully");
+    printf("Node inserted successfully at position 1");
 
 }
 
