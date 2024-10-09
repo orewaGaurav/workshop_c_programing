@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 //self referential structure
 struct node {
     int data;
@@ -26,6 +27,7 @@ void create(){
 
     }
 }
+
 //function  to display nodes
 void display(){
     struct node *new;
@@ -39,19 +41,34 @@ void display(){
         }
     }
 }
+
+//function to insert new node at beginning index 0
+void insert(){
+    struct node *add;
+    add = (struct node *)malloc(sizeof(struct node));
+    printf("Enter the value: ");
+    scanf("%d",&add->data);
+    add ->next =head;
+    head = add;
+    printf("node inserted successfully");
+
+}
+
 //main function
 int main(){
     int choice;
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
-    printf("\n1\tCreate node\n2\tDisplay node\n3\tExit\nEnter your choice: ");
+    printf("\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Exit\nEnter your choice: ");
     scanf("%d",&choice);
    
         if(choice == 1)
         create();
         else if(choice == 2)
         display();
-        else if(choice == 3)
+        else if(choice ==3)
+        insert();
+        else if(choice == 4)
         break;
         else
         printf("Enter the right choice: 1\t2\t3");
