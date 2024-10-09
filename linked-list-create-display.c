@@ -42,6 +42,7 @@ void display(){
 //main function
 int main(){
     int choice;
+    //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
     printf("\n1\tCreate node\n2\tDisplay node\n3\tExit\nEnter your choice: ");
     scanf("%d",&choice);
