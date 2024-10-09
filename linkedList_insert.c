@@ -28,22 +28,8 @@ void create(){
     }
 }
 
-//function  to display nodes
-void display(){
-    struct node *new;
-    new = head;
-    if(head == NULL)
-    printf("No node exist");
-    else{
-        while(new != NULL){
-        printf("%d ",new->data);
-        new = new->next;
-        }
-    }
-}
-
 //function to insert new node at beginning index 0
-void insert(){
+void headInsert(){
     struct node *add;
     add = (struct node *)malloc(sizeof(struct node));
     printf("Enter the value: ");
@@ -54,12 +40,26 @@ void insert(){
 
 }
 
+//function  to display nodes
+void display(){
+    struct node *new;
+    new = head;
+    if(head == NULL)
+    printf("\nNo node exist");
+    else{
+        while(new != NULL){
+        printf("%d ",new->data);
+        new = new->next;
+        }
+    }
+}
+
 //main function
 int main(){
     int choice;
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
-    printf("\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Exit\nEnter your choice: ");
+    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Exit\nEnter your choice: ");
     scanf("%d",&choice);
    
         if(choice == 1)
@@ -67,7 +67,7 @@ int main(){
         else if(choice == 2)
         display();
         else if(choice ==3)
-        insert();
+        headInsert();
         else if(choice == 4)
         break;
         else
