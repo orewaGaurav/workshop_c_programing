@@ -40,6 +40,21 @@ void headInsert(){
 
 }
 
+//function to insert new node at last position
+void tailInsert(){
+    struct node *lastAdd,*tmp;
+    lastAdd = (struct node *)malloc(sizeof(struct node));
+    lastAdd->next =NULL;
+    printf("\nEnter the value: ");
+    scanf("%d",&lastAdd->data);
+    tmp =head;
+    while(tmp->next != NULL){
+        tmp = tmp->next;
+    }
+    tmp->next = lastAdd;
+
+} 
+
 //function  to display nodes
 void display(){
     struct node *new;
@@ -59,7 +74,7 @@ int main(){
     int choice;
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
-    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Exit\nEnter your choice: ");
+    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Insert new node at last position\n5-Exit\nEnter your choice: ");
     scanf("%d",&choice);
    
         if(choice == 1)
@@ -69,6 +84,8 @@ int main(){
         else if(choice ==3)
         headInsert();
         else if(choice == 4)
+        tailInsert();
+        else if(choice == 5)
         break;
         else
         printf("Enter the right choice: 1\t2\t3");
