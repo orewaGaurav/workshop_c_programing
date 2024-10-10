@@ -70,7 +70,7 @@ void insert(){
         head = ptr;
     }
     else{
-        for(int i =1;i<index;i++){
+        for(int i =0;i<index-1;i++){
             tmp = tmp->next;
         }
         ptr->next =tmp->next;
