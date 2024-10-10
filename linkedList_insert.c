@@ -55,6 +55,38 @@ void tailInsert(){
 
 } 
 
+//function to insert node at any position
+void insert(){
+    int index;
+    struct node *ptr,*tmp;
+    ptr = (struct node*)malloc(sizeof(struct node));
+    printf("Enter the value: ");
+    scanf("%d",&ptr->data);
+    printf("Enter the index to insert: ");
+    scanf("%d",&index);
+    tmp =head;
+    for(int i =1;i<index;i++){
+        if(head==NULL){
+            printf("no insertion");
+        }
+        tmp = tmp->next;
+    }
+    ptr->next =tmp->next;
+    tmp->next=ptr;
+}
+
+//function to count the number of nodes
+void count(){
+    struct node *tmp;
+    int count =0;
+    tmp = head;
+    while(tmp!=NULL){
+        count++;
+        tmp = tmp->next;
+    }
+    printf("\nNo. of nodes = %d",count);
+}
+
 //function  to display nodes
 void display(){
     struct node *new;
@@ -74,7 +106,9 @@ int main(){
     int choice;
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
-    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1\n4-Insert new node at last position\n5-Exit\nEnter your choice: ");
+    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1");
+    printf("\n4-Insert new node at last position\n5-Insert at given index\n6-Count no. of nodes\n7-Exit\n\nEnter your choice: ");
+    
     scanf("%d",&choice);
    
         if(choice == 1)
@@ -86,8 +120,12 @@ int main(){
         else if(choice == 4)
         tailInsert();
         else if(choice == 5)
+        insert();
+        else if(choice == 6)
+        count();
+        else if(choice == 7)
         break;
         else
-        printf("Enter the right choice: 1\t2\t3");
+        printf("Enter the right choice: 1 2 3 4 5 6 7");
     }
 }
