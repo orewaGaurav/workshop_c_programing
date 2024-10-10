@@ -90,6 +90,25 @@ void count(){
     printf("\nNo. of nodes = %d",count);
 }
 
+//function to delete fist node
+void headDelete(){
+    struct node *tmp;
+    tmp =head;
+    head = tmp->next;
+    printf("First node deleted !");
+}
+
+//function to delete last node
+void tailDelete(){
+    struct node *tmp;
+    tmp = head;
+    while(tmp->next!=NULL){
+        tmp = tmp->next;
+    }
+    tmp->next =NULL;
+    printf("Last node deleted !");
+}
+
 //function  to display nodes
 void display(){
     struct node *new;
@@ -110,7 +129,9 @@ int main(){
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
     printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1");
-    printf("\n4-Insert new node at last position\n5-Insert at given index\n6-Count no. of nodes\n7-Exit\n\nEnter your choice: ");
+    printf("\n4-Insert new node at last position\n5-Insert at given index\n6-Count no. of nodes");
+    printf("\n7-Delete the first node\n8-Delete last node\n9-exit\n");
+    printf("\nEnter your choice: ");
     
     scanf("%d",&choice);
    
@@ -127,6 +148,10 @@ int main(){
         else if(choice == 6)
         count();
         else if(choice == 7)
+        headDelete();
+        else if(choice == 8)
+        tailDelete();
+        else if(choice == 9)
         break;
         else
         printf("Enter the right choice: 1 2 3 4 5 6 7");
