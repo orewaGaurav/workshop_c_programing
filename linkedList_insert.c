@@ -65,14 +65,17 @@ void insert(){
     printf("Enter the index to insert: ");
     scanf("%d",&index);
     tmp =head;
-    for(int i =1;i<index;i++){
-        if(head==NULL){
-            printf("no insertion");
-        }
-        tmp = tmp->next;
+    if(index==0){
+        ptr->next = head;
+        head = ptr;
     }
-    ptr->next =tmp->next;
-    tmp->next=ptr;
+    else{
+        for(int i =1;i<index;i++){
+            tmp = tmp->next;
+        }
+        ptr->next =tmp->next;
+        tmp->next=ptr;
+    }
 }
 
 //function to count the number of nodes
