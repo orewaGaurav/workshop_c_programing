@@ -112,6 +112,31 @@ void tailDelete(){
     printf("Last node deleted !");
 }
 
+//function to delete the any node or desired position
+void delete(){
+    struct node *tmp,*tmp1;
+    tmp = head;
+    int position;
+    printf("Enter the the position to delete the node: ");
+    scanf("%d",&position);
+    if(position == 1){
+        head = tmp->next;
+        tmp->next=NULL;
+        free(tmp);
+    }
+    else{
+        for(int i = 1;i<position-1;i++){
+            tmp= tmp->next;
+        }
+        tmp1 = tmp->next;
+        tmp->next=tmp1->next;
+        tmp1->next=NULL;
+        free(tmp1);
+        printf("\nNode deleted!");
+    }
+
+}
+
 //function  to display nodes
 void display(){
     struct node *new;
@@ -131,9 +156,9 @@ int main(){
     int choice;
     //while k bahar printf nai likhna hai infinite loop ho jayega nai to
      while(1){
-    printf("\n\n1-Create node\n2-Display node\n3-Insert new node at position 1");
-    printf("\n4-Insert new node at last position\n5-Insert at given index\n6-Count no. of nodes");
-    printf("\n7-Delete the first node\n8-Delete last node\n9-exit\n");
+    printf("\n\n1-Create node\n2-Display node\n3-Exit\n4-Insert new node at position 1");
+    printf("\n5-Insert new node at last position\n6-Insert at given index\n7-Count no. of nodes");
+    printf("\n8-Delete the first node\n9-Delete last node\n10-Delete node at position\n");
     printf("\nEnter your choice: ");
     
     scanf("%d",&choice);
@@ -143,19 +168,21 @@ int main(){
         else if(choice == 2)
         display();
         else if(choice ==3)
-        headInsert();
-        else if(choice == 4)
-        tailInsert();
-        else if(choice == 5)
-        insert();
-        else if(choice == 6)
-        count();
-        else if(choice == 7)
-        headDelete();
-        else if(choice == 8)
-        tailDelete();
-        else if(choice == 9)
         break;
+        else if(choice ==4)
+        headInsert();
+        else if(choice == 5)
+        tailInsert();
+        else if(choice == 6)
+        insert();
+        else if(choice == 7)
+        count();
+        else if(choice == 8)
+        headDelete();
+        else if(choice == 9)
+        tailDelete();
+        else if(choice == 10)
+        delete();
         else
         printf("Enter the right choice: 1 2 3 4 5 6 7");
     }
