@@ -95,17 +95,21 @@ void headDelete(){
     struct node *tmp;
     tmp =head;
     head = tmp->next;
+    free(tmp);
     printf("First node deleted !");
 }
 
 //function to delete last node
 void tailDelete(){
-    struct node *tmp;
+    struct node *tmp,*tmp1;
     tmp = head;
-    while(tmp->next!=NULL){
+    while(tmp->next->next!=NULL){
         tmp = tmp->next;
     }
+    tmp1 =tmp->next;
+    printf("%d\n",tmp->data);
     tmp->next =NULL;
+    free(tmp1);
     printf("Last node deleted !");
 }
 
