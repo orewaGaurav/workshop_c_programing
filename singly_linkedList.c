@@ -106,10 +106,9 @@ void tailDelete(){
     while(tmp->next->next!=NULL){
         tmp = tmp->next;
     }
-    tmp1 =tmp->next;
-    printf("%d\n",tmp->data);
-    tmp->next =NULL;
-    free(tmp1);
+    tmp1 =tmp->next;//points to last node 
+    tmp->next =NULL;//points to second last node 
+    free(tmp1);//free the memory of last node
     printf("Last node deleted !");
 }
 
