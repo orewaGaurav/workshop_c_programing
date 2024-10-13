@@ -27,7 +27,7 @@ void create(int value){
 }
 
 //function to delete node at index
-void delete1(int value){
+void delete(int value){
     return;
 }
 
@@ -55,7 +55,7 @@ int main(){
         if(task==1)
         create(value);
         else if(task ==2)
-        delete1(value);
+        delete(value);
     }
     traverse();
     return 0;
