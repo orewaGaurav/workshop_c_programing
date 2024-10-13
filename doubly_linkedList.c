@@ -26,9 +26,34 @@ void create(int value){
     }
 }
 
-//function to delete node at index
+//function to delete node by value
 void delete(int value){
+    if(head ==NULL)
+    //no node exists
     return;
+
+    //first node delete
+    struct node *tmp,*del;
+    tmp = head;
+    if(tmp->data ==value){
+        head =tmp->next;
+        if(head != NULL)
+        head->previous=NULL;
+        free(tmp);
+        return;
+    }
+    while(tmp->next!=NULL && tmp->next->data!=value){
+        tmp =tmp->next;
+    }
+    if(tmp->next==NULL)
+    //entered node does not exists
+    return;
+
+    del = tmp->next;
+    tmp->next = del->next;
+    if(del->next != NULL)
+    del->next->previous=tmp;
+    free(del);
 }
 
 //function to traverse the node;
