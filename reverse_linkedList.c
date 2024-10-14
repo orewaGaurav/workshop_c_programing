@@ -19,7 +19,7 @@ void display(){
     tmp = head;
     while(tmp != NULL){
         printf("%d ",tmp->data);
-        tmp =tmp->next;
+        tmp = tmp->next;
     }
     printf("\n");
 }
