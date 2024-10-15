@@ -35,7 +35,7 @@ int main(){
 	int n,value;
 	printf("Enter the no. of nodes: ");
 	scanf("%d",&n);
-	for(int i =0;i<n;i++){
+	for(int i = 0;i<n;i++){
 		scanf("%d",&value);
 		insert(value);
 	}
