@@ -26,7 +26,7 @@ void display(int n){
     for(int i=1;i<=n/2;i++){
 		tmp=tmp->next;
 	}
-	printf("%d",tmp->data);
+	printf("%d", tmp->data);
 	printf("\n");
 	
 	
